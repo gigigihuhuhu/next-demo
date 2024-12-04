@@ -1,11 +1,13 @@
 import Slider from "@/components/ui/Slider";
+import MainMenu from "@/components/ui/MainMenu";
 
 export default function Home() {
   return (
     <>
-      <main className="flex flex-col gap-8">
+      <div className="flex flex-col gap-4">
         <Slider></Slider>
-      </main>
+        <MainMenu></MainMenu>
+      </div>
     </>
   );
 }
