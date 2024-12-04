@@ -46,7 +46,7 @@ export default function Footer() {
             <p>경기도 성남시 분당구 대왕판교로 XXX길 XX로 XX동 XX빌딩 000호</p>
           </div>
         </div>
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 pr-20">
           <p className="text-2xl text-white">고객센터</p>
           <p className="text-2xl text-white">070-0000-0000</p>
           <p className="text-sm text-gray-500">
