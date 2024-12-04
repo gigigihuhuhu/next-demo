@@ -8,6 +8,7 @@ RUN npm install --frozen-lockfile
 # Copy the rest of the application code
 COPY . .
 RUN npm run build
+RUN rm -rf /app/.next/cache
 
 # Stage 2: Production Stage
 FROM node:lts-alpine
@@ -15,6 +16,6 @@ WORKDIR /app
 COPY --from=builder /app/.next ./.next
 COPY --from=builder /app/package*.json ./
 RUN npm install --production --frozen-lockfile
-EXPOSE 3000
+EXPOSE 80
 
 CMD ["npm", "start"]
