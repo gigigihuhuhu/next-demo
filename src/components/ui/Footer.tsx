@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="bg-gray-900 w-full h-[392px] max-md:h-[270px] p-10">
       <div className="grow flex flex-row justify-between">
         <div className="flex flex-col gap-8">
-          <Link className="flex flex-row gap-2 " href="/">
+          <Link href="/">
             <Logo fontColor="white"></Logo>
           </Link>
           <div className="flex flex-row gap-8 font-medium text-white">
