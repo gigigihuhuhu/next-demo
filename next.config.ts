@@ -2,7 +2,12 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
-    domains: ['cdn.kyungsu.com'],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "cdn.kyungsu.com",
+      },
+    ],
   },
 };
 
