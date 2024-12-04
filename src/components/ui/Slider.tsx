@@ -7,8 +7,10 @@ import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 
 import { AngleNextIcon, AnglePrevIcon } from "@/components/Icons";
+import { mainContentsSample, MainContents } from "@/data/sampleData";
 
 export default function Slider() {
+  const mainContents: Array<MainContents> = mainContentsSample;
   return (
     <>
       <Swiper
@@ -33,21 +35,43 @@ export default function Slider() {
         modules={[Navigation, Autoplay]}
         className="max-w-[90%] max-md:max-w-[100%]"
       >
-        {[1, 2, 3, 4, 5, 6].map((i) => {
+        {mainContents.map((content, el) => {
           // slide samples
           return (
-            <SwiperSlide key={i}>
+            <SwiperSlide key={el}>
               <div className="relative w-[64vw] max-md:w-[91vw] h-[400px] max-md:h-[360px]">
                 <Image
                   alt=""
-                  src={`https://cdn.kyungsu.com/samples/panel/pc/panel-sample${
-                    (i % 3) + 1
-                  }.webp`} // number of samples not enough for infinite loop
+                  src={content.src}
                   sizes="auto"
                   fill
                   className="object-cover rounded-3xl"
-                  priority
+                  priority={content.priority}
+                  loading={content.priority ? undefined : "lazy"}
                 ></Image>
+                <div className="absolute top-16 left-10 flex flex-col gap-4 items-start">
+                  <div className="py-1 px-2 rounded-3xl text-sm text-white bg-purple-500 font-bold">
+                    {content.chip.label}
+                  </div>
+                  <div className="flex flex-col gap-1">
+                    {content.text.title.split("|").map((content, el) => {
+                      return (
+                        <p key={el} className="text-3xl text-white font-bold">
+                          {content}
+                        </p>
+                      );
+                    })}
+                  </div>
+                  <div className="flex flex-col gap-1">
+                    {content.text.detail.split("|").map((content, el) => {
+                      return (
+                        <p key={el} className="text-sm text-slate-400">
+                          {content}
+                        </p>
+                      );
+                    })}
+                  </div>
+                </div>
               </div>
             </SwiperSlide>
           );
