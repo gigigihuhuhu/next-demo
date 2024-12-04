@@ -48,6 +48,8 @@ export default function Slider() {
                   className="object-cover rounded-3xl"
                   priority={content.priority}
                   loading={content.priority ? undefined : "lazy"}
+                  placeholder="blur"
+                  blurDataURL="data:image/webp;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAQAAAC0NkA6AAAAL0lEQVR42u3NMQEAAAgDINfVHlY3g4cfFCA99S4SiUQikUgkEolEIpFIJBKJ5GYB6wMsic3M3xIAAAAASUVORK5CYII="
                 ></Image>
                 <div className="absolute top-16 left-10 flex flex-col gap-4 items-start">
                   <div className="py-1 px-2 rounded-3xl text-sm text-white bg-purple-500 font-bold">

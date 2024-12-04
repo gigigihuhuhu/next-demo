@@ -3,7 +3,7 @@ import { Logo } from "@/components/Icons";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 w-full h-[392px] max-md:h-[270px] p-10">
+    <footer className="bg-gray-900 w-full h-[392px] max-md:h-[270px] p-10 overflow-hidden">
       <div className="grow flex flex-row justify-between">
         <div className="flex flex-col gap-8">
           <Link href="/">
