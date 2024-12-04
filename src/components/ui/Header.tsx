@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Logo, GiftIcon, ProfileIcon, SearchIcon, MessageIcon, AlarmIcon } from "@/components/Icons";
+import { Logo, GiftIcon, ProfileIcon, SearchIcon, MessageIcon, AlarmIcon, HamburgerIcon } from "@/components/Icons";
 
 export default function Header() {
   return (
@@ -17,20 +17,23 @@ export default function Header() {
           <Link href="/product/preference">선호작</Link>
         </div>
         <div className="flex flex-row gap-4 text-xl font-bold">
-          <Link href="/product/free">
+          <Link href="/product/search">
             <SearchIcon></SearchIcon>
           </Link>
-          <Link href="/product/top50/free-top">
+          <Link href="/product/alarm">
             <AlarmIcon></AlarmIcon>
           </Link>
-          <Link href="/product/paid">
+          <Link className="max-md:hidden" href="/product/message">
             <MessageIcon></MessageIcon>
           </Link>
-          <Link href="/product/preference">
+          <Link className="max-md:hidden" href="/product/gift">
             <GiftIcon></GiftIcon>
           </Link>
-          <Link href="/product/preference">
+          <Link className="max-md:hidden" href="/product/profile">
             <ProfileIcon></ProfileIcon>
+          </Link>
+          <Link className="hidden max-md:block" href="/product/menu">
+            <HamburgerIcon></HamburgerIcon>
           </Link>
         </div>
       </div>

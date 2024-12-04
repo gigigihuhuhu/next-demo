@@ -419,3 +419,19 @@ export function QuestIcon() {
     </svg>
   );
 }
+
+export function HamburgerIcon() {
+  return (
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="black"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d="M2 19H22" stroke="black" strokeWidth="1" />
+      <path d="M2 12H22" stroke="black" strokeWidth="1" />
+      <path d="M2 5H22" stroke="black" strokeWidth="1" />
+    </svg>
+  );
+}
