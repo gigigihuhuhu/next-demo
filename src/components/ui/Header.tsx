@@ -3,7 +3,7 @@ import { Logo, GiftIcon, ProfileIcon, SearchIcon, MessageIcon, AlarmIcon } from 
 
 export default function Header() {
   return (
-    <header className="bg-transparent w-full fixed h-12 py-8 z-10 flex items-center border-b border-solid border-slate-200">
+    <header className="bg-white w-full fixed h-12 py-8 z-10 flex items-center border-b border-solid border-slate-200">
       <div className="grow flex flex-row justify-between mx-6 max-lg:mx-3 items-center">
         <div>
           <Link className="flex flex-row gap-2 " href="/">
